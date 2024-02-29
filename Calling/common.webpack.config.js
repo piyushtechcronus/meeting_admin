@@ -59,7 +59,7 @@ const webpackConfig = (sampleAppDir, env, babelConfig) => {
       })
     ],
     devServer: {
-      disableHostCheck: true,
+     
       port: process.env.PORT || 3000,
       hot: true,
       open: true,
