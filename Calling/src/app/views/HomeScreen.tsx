@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 import { Stack, PrimaryButton, Image, ChoiceGroup, IChoiceGroupOption, Text, TextField } from '@fluentui/react';
 
-import heroSVG from '../../assets/hero.svg';
+import heroSVG from '../../assets/download1.svg';
 import {
   imgStyle,
   infoContainerStyle,

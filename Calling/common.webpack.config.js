@@ -59,46 +59,65 @@ const webpackConfig = (sampleAppDir, env, babelConfig) => {
       })
     ],
     devServer: {
-      port: process.env.PORT || 3002,
+      disableHostCheck: true,
+      port: process.env.PORT || 3000,
       hot: true,
       open: true,
       static: { directory: path.resolve(sampleAppDir, 'public') },
       proxy: [
         {
           path: '/token',
-          target: 'http://[::1]:8080'
+          target: 'http://[::1]:8080',
+          changeOrigin: true,
+          secure: false
         },
         {
           path: '/refreshToken/*',
-          target: 'http://[::1]:8080'
+          target: 'http://[::1]:8080',
+          changeOrigin: true,
+          secure: false
         },
         {
           path: '/isValidThread/*',
-          target: 'http://[::1]:8080'
+          target: 'http://[::1]:8080',
+          changeOrigin: true,
+          secure: false
         },
         {
           path: '/createThread',
-          target: 'http://[::1]:8080'
+          target: 'http://[::1]:8080',
+          changeOrigin: true,
+          secure: false
         },
         {
           path: '/userConfig/*',
-          target: 'http://[::1]:8080'
+          target: 'http://[::1]:8080',
+          changeOrigin: true,
+          secure: false
         },
         {
           path: '/getEndpointUrl',
-          target: 'http://[::1]:8080'
+          target: 'http://[::1]:8080',
+          changeOrigin: true,
+          secure: false
         },
         {
           path: '/addUser/*',
-          target: 'http://[::1]:8080'
+          target: 'http://[::1]:8080',
+          changeOrigin: true,
+          secure: false
         },
         {
           path: '/createRoom',
-          target: 'http://[::1]:8080'
+          target: 'http://[::1]:8080',
+          changeOrigin: true,
+          secure: false
         },
         {
           path: '/addUserToRoom',
-          target: 'http://[::1]:8080'
+          target: 'http://[::1]:8080',
+          changeOrigin: true,
+          secure: false
         }
       ]
     }
