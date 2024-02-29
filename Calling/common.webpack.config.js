@@ -59,7 +59,7 @@ const webpackConfig = (sampleAppDir, env, babelConfig) => {
       })
     ],
     devServer: {
-      port: process.env.PORT || 3000,
+      port: process.env.PORT || 3002,
       hot: true,
       open: true,
       static: { directory: path.resolve(sampleAppDir, 'public') },
