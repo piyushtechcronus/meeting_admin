@@ -357,3 +357,5 @@ Calling/.vscode
 Calling/build/
 Server/.rush/temp/
 Server/.vscode/
+Calling/node_modules
+Server/node_modules
